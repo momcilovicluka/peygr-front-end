@@ -30,7 +30,7 @@ const Auth = () => {
 
         const { username, password, phoneNumber, avatarURL } = form;
 
-        const URL = 'https://peygr.herokuapp.com/';
+        const URL = 'https://peygr.herokuapp.com/auth';
 
         const { data: { token, userId, hashedPassword, fullName } } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
             username, password, fullName: form.fullName, phoneNumber, avatarURL,
