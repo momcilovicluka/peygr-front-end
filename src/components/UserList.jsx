@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Avatar, useChatContext } from "stream-chat-react";
-import { List } from "stream-chat-react/dist/components/AutoCompleteTextarea/List";
 
 import { InviteIcon } from "../assets";
 
@@ -81,6 +80,7 @@ const UserList = ({ setSelectedUsers }) => {
         }
 
         if (client) getUsers();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     if (error) {

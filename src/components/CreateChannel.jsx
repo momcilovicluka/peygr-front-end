@@ -3,11 +3,8 @@ import { useChatContext } from 'stream-chat-react';
 
 import { UserList } from './';
 import { CloseCreateChannel } from '../assets';
-import { initialState } from "stream-chat-react/dist/components/Channel/channelState";
 
 const ChannelNameInput = ({ channelName = '', setChannelName }) => {
-    const { client, setActiveChannel } = useChatContext();
-    const [selectedUsers, setSelectedUsers] = useState([client.userID || ''])
 
     const handleChange = (event) => {
         event.preventDefault();
